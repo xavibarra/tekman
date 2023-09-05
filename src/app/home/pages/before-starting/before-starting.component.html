@@ -1,0 +1,31 @@
+<section>
+  <div class="h-60 flex items-center justify-center">
+    <h1>{{ "beforeStartingTitle" | translate }}</h1>
+  </div>
+  <div class="grid grid-cols-3 gap-10 justify-center">
+    <ng-container *ngFor="let item of INSTRUCTIONS_BEFORE_STARTING">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-24 h-24 bg-icons flex items-center justify-center rounded-2xl mb-10"
+        >
+          <img [src]="item.icon" [alt]="item.label" />
+        </div>
+        <p [innerHTML]="item.description" class="text-center max-w-xs"></p>
+      </div>
+    </ng-container>
+  </div>
+  <div class="flex items-center justify-center mt-28">
+    <app-button [variant]="'primary'" class="px-1"
+      ><img class="mr-2.5" src="assets/play.png" alt="play icon" />{{
+        "beforeStartingButon" | translate
+      }}</app-button
+    >
+  </div>
+  <app-button
+    (click)="goHome()"
+    class="fixed top-4 right-4"
+    [variant]="'primary'"
+  >
+    X
+  </app-button>
+</section>

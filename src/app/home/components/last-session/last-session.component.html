@@ -1,0 +1,26 @@
+<section class="w-full bg-white rounded-lg p-4 mb-8">
+  <h2>
+    {{ "lastSessionTitle" | translate }}
+  </h2>
+  <p>{{ lastSessionText }}</p>
+  <div class="flex items-center gap-4 my-4">
+    <app-button (click)="handleButtonClick()" [variant]="'primary'"
+      ><img class="mr-2.5" src="assets/play.png" alt="play icon" />
+      {{ "lastSesion1Buton" | translate }}</app-button
+    >
+    <app-button
+      class="text-customText border-customBorder border-2 border-solid rounded-md"
+      (click)="handleButtonClick()"
+      [variant]="'secondary'"
+      ><img class="mr-2.5" src="assets/shuffle-one.png" alt="shuffle icon" />
+      {{ "lastSesion2Buton" | translate }}</app-button
+    >
+    <app-button
+      class="text-customText border-customBorder border-2 border-solid rounded-md"
+      (click)="handleButtonClick()"
+      [variant]="'secondary'"
+      ><img class="mr-2.5" src="assets/next.png" alt="next icon" />
+      {{ "lastSesion3Buton" | translate }}</app-button
+    >
+  </div>
+</section>

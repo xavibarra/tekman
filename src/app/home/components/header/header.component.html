@@ -1,0 +1,14 @@
+<header class="flex items-center justify-between px-12 h-24 bg-primary">
+  <h1 class="text-white">{{ "headerTitle" | translate }}</h1>
+  <nav class="flex gap-6">
+    <ng-container *ngFor="let item of NAVBAR_ITEMS">
+      <button
+        class="flex items-center justify-center bg-white w-12 h-12 rounded-full border-none shadow-primary transition-all duration-200 hover:translate-y-1 hover:shadow-none"
+        [title]="item.label"
+        (click)="onButtonClick(item)"
+      >
+        <img [src]="item.icon" [alt]="item.label" />
+      </button>
+    </ng-container>
+  </nav>
+</header>

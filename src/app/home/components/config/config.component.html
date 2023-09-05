@@ -1,0 +1,54 @@
+<div
+  class="absolute w-full h-full bg-[#3B3B3B] top-0 left-0 opacity-50"
+  (click)="close()"
+></div>
+<aside
+  class="absolute top-0 right-0 w-[500px] bg-white h-full z-[9] flex flex-col items-center"
+>
+  <div class="p-4">
+    <div class="fixed top-8 right-[28rem] cursor-pointer" (click)="close()">
+      <img src="/assets/arrow-right.png" alt="arrow right" />
+    </div>
+  </div>
+  <h2 class="mb-20">{{ "ConfigurationTitle" | translate }}</h2>
+  <form action="">
+    <fieldset class="border border-[#3B3B3B] rounded">
+      <legend class="mx-2 text-[#ADAFB4] text-lg font-semibold">
+        {{ "Idioma" | translate }}
+      </legend>
+      <select
+        class="appearance-none bg-transparent w-[100%] mb-1 focus:outline-none"
+        name="language"
+        id="language"
+        [(ngModel)]="selectedLanguage"
+      >
+        <option value="es">Español</option>
+        <option value="ca">Català</option>
+      </select>
+    </fieldset>
+    <fieldset class="mt-2.5 mb-72 border border-[#3B3B3B] rounded">
+      <legend class="mx-2 text-[#ADAFB4] text-lg font-semibold">
+        {{ "Course" | translate }}
+      </legend>
+      <select
+        class="appearance-none bg-transparent border-none focus:ring-0 w-full mb-1 focus:outline-none"
+        name="course"
+        id="course"
+        [(ngModel)]="selectedCourse"
+      >
+        <option value="1">{{ "Course1option" | translate }}</option>
+        <option value="2">{{ "Course2option" | translate }}</option>
+        <option value="3">{{ "Course3option" | translate }}</option>
+      </select>
+    </fieldset>
+    <app-button
+      (click)="switchLanguage()"
+      (click)="close()"
+      [variant]="'primary'"
+      >{{ "configurationButon" | translate }}</app-button
+    >
+    <p (click)="close()" class="cursor-pointer underline mt-8">
+      {{ "configurationClose" | translate }}
+    </p>
+  </form>
+</aside>

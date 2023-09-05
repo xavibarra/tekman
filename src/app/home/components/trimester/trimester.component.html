@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class="bg-background min-h-[calc(100vh-96px)]">
+  <div class="ml-16 text-xl font-normal flex py-5 px-0 pt-21 pb-30">
+    <a href="#" class="hover:underline flex">
+      <span class="arrow-icon"
+        ><img src="/assets/arrow-right.png" alt="right arrow"
+      /></span>
+      <span class="link-text ml-2">{{ "back" | translate }}</span>
+    </a>
+  </div>
+  <section class="ml-16 flex">
+    <div class="">
+      <div class="flex items-center">
+        <div class="flex rounded-lg bg-white shadow-primary p-4">
+          <aside>
+            <p class="font-bold">{{ trimesterId }}º Trimestre</p>
+            <p class="flex">{{ done }}/50 {{ "sesions" | translate }}</p>
+          </aside>
+          <ng-container [ngSwitch]="done">
+            <img
+              *ngSwitchCase="50"
+              class="h-10 w-10 ml-4"
+              src="/assets/complete.png"
+              alt="Status completed"
+            />
+            <img
+              *ngSwitchCase="0"
+              class="h-10 w-10 ml-4"
+              src="/assets/not-started.png"
+              alt="Status not started"
+            />
+            <img
+              *ngSwitchDefault
+              class="h-10 w-10 ml-4"
+              src="/assets/semicomplete.png"
+              alt="Status semi completed"
+            />
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="ml-5 w-9/12 bg-white rounded-lg p-10 h-[506px] overflow-auto">
+      <div class="flex justify-between items-center">
+        <p class="font-bold text-2xl">
+          {{ "sesions" | translate }} del {{ trimesterId }}º
+          {{ "trimestre" | translate }}
+        </p>
+        <div class="bg-[#ED993F] py-2 px-4 rounded-lg text-white font-bold">
+          {{ done }}/50
+        </div>
+      </div>
+      <hr class="my-4" />
+      <ng-container *ngFor="let session of data; let i = index">
+        <div
+          [ngClass]="{ 'bg-[#F26C48]': i === selectedSessionIndex }"
+          class="flex justify-between h-12 items-center p-4 rounded-lg cursor-pointer"
+          (click)="toggleSession(i)"
+        >
+          <span [ngClass]="{ 'text-white': i === selectedSessionIndex }">
+            {{ session.number }} {{ session.name | translate }}
+          </span>
+          <span
+            class="cursor-pointer flex items-center justify-center"
+            *ngIf="i === selectedSessionIndex"
+          >
+            <!-- Agregar función para redirigir a otra página -->
+
+            <img src="/assets/shuffle-white.png" />
+            <img
+              [routerLink]="'/home/before-starting'"
+              class="p-[1px] ml-4 bg-white rounded-lg"
+              src="/assets/play-one.png"
+            />
+          </span>
+          <span class="cursor-pointer" *ngIf="i !== selectedSessionIndex">
+            <!-- Aquí puedes mostrar las imágenes originales cuando no se selecciona el elemento -->
+            <ng-container *ngIf="session.done; else marcar">
+              <img src="/assets/eyes.png" />
+            </ng-container>
+            <ng-template #marcar>
+              <img src="/assets/eyescrossed-out-eye.png" />
+            </ng-template>
+          </span>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+</div>

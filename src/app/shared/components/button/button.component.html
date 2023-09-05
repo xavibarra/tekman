@@ -1,0 +1,10 @@
+<button
+  class="flex items-center justify-between font-bold py-2 px-4 rounded-md"
+  [ngClass]="{
+    'bg-secondary text-white shadow-secondary hover:translate-y-1 hover:shadow-none':
+      variant === 'primary',
+    'bg-white': variant === 'secondary'
+  }"
+>
+  <ng-content></ng-content>
+</button>
