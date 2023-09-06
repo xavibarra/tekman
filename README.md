@@ -2,7 +2,7 @@
 
 Este proyecto ha sido realizado con [Angular CLI](https://github.com/angular/angular-cli) versión 15.2.1.
 
-![Descripción de la imagen](/assets/tekman.png)
+![Descripción de la imagen](src/assets/tekman.png)
 
 ## Aplicación
 
