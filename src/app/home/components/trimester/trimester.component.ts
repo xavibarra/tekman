@@ -16,6 +16,7 @@ export class TrimesterComponent implements OnInit, OnDestroy {
   done?: number;
   subscription: Subscription = new Subscription();
   selectedSessionIndex: number = -1;
+  toggle: boolean = false;
 
   readonly MAP_ROUTER = {
     1: 'first',
@@ -55,6 +56,10 @@ export class TrimesterComponent implements OnInit, OnDestroy {
           });
       }
     });
+
+    this.subscription = this.homeService.toggleConfig$.subscribe(
+      (toggle) => (this.toggle = toggle)
+    );
   }
 
   listenStorage(): void {

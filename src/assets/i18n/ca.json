@@ -152,6 +152,7 @@
     "tema150": "Matemàtiques Avançades i Temes Especials"
   },
   "headerTitle": "Targetes",
+  "noLastSession": "Encara no s'ha vist cap sessió",
   "lastSessionTitle": "Torna on ho vas deixar",
   "lastSesion1Buton": "Reproducció ordenada",
   "lastSesion2Buton": "Aleatori",

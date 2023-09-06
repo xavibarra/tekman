@@ -152,6 +152,7 @@
     "tema150": "Matemáticas Avanzadas y Temas Especiales"
   },
   "headerTitle": "Tarjetas",
+  "noLastSession": "Aún no se ha visto ninguna sesión",
   "lastSessionTitle": "Vuelve donde lo dejaste",
   "lastSesion1Buton": "Reproducción ordenada",
   "lastSesion2Buton": "Aleatorio",

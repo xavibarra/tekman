@@ -19,7 +19,7 @@ export class LastSessionComponent implements OnInit {
 
     if (lastSessionDataStr) {
       const lastSessionData = JSON.parse(lastSessionDataStr);
-      const sessionName = this._translateService.instant(lastSessionData.name); // Traduce el nombre de la sesión
+      const sessionName = this._translateService.instant(lastSessionData.name);
       const sessionId = lastSessionData.id;
 
       let trimesterNumber = '1º';
@@ -31,9 +31,11 @@ export class LastSessionComponent implements OnInit {
 
       this.lastSessionText = `${trimesterNumber} Trimestre - Sesión ${sessionId}, ${sessionName}`;
     } else {
-      this.lastSessionText = this._translateService.instant(
-        'Aún no se ha visto ninguna sesión'
-      ); // Traduce el texto predeterminado
+      this._translateService
+        .get('noLastSession')
+        .subscribe((translation: string) => {
+          this.lastSessionText = translation;
+        });
     }
   }
 
