@@ -8,7 +8,7 @@ Este proyecto ha sido realizado con [Angular CLI](https://github.com/angular/ang
 
 Esta aplicación es una prueva tecnica para la empresa Tekman.
 
-En ella hay en primer luga una página inicial con los siguientes componentes:
+En ella hay una página inicial con los siguientes componentes:
 
 - Header: En este componente, se muestra un título y tres botones en la parte derecha. El segundo botón es funcional y abre la configuración, donde es posible cambiar el idioma de la aplicación entre catalán y castellano.
 
