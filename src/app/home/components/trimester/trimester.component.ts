@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Location } from '@angular/common';
 
 import { HomeService } from '../../services/home.service';
 import { Session } from '../../models/trimester.model';
@@ -24,7 +25,8 @@ export class TrimesterComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly _route: ActivatedRoute,
-    private readonly homeService: HomeService
+    private readonly homeService: HomeService,
+    private readonly _location: Location
   ) {}
 
   ngOnInit(): void {
@@ -126,6 +128,10 @@ export class TrimesterComponent implements OnInit, OnDestroy {
 
     // Guarda la última sesión en el localStorage.
     localStorage.setItem('lastSession', JSON.stringify(session));
+  }
+
+  goBack() {
+    this._location.back();
   }
 
   ngOnDestroy(): void {
