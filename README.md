@@ -10,23 +10,27 @@ Esta aplicación es una prueva tecnica para la empresa Tekman.
 
 En ella hay en primer luga una página inicial con los siguientes componentes:
 
-- Header: En este componente podemos ver un titulo y tres botones en la parte derecha, el segundo botón es funcional y abre la parte de configuración en la que es posible cambiar el idioma de la aplicación entre el catalán y el castellano.
+- Header: En este componente, se muestra un título y tres botones en la parte derecha. El segundo botón es funcional y abre la configuración, donde es posible cambiar el idioma de la aplicación entre catalán y castellano.
 
-- Last session: En este componente el usuario puede ver el título de la ultima sesión visitada y puede hacer clic en algún botón para acceder a la página previa de entrada a las sesiones.
+- Last session: En este componente, el usuario puede ver el título de la última sesión visitada y puede hacer clic en un botón para acceder a la página anterior, que muestra las sesiones disponibles.
 
-- Syllabus: Aqui el usuario puede ver los tres trimestres y la cantidad de sesiones completadas de cada uno, hay tres imagenes segun las sesiones que ha visto el usuario, una cuando aun no ha empezado, una cuando ha visto alguna de la sesiones del trimestre y finalmente cuando las ha visto todas.
+- Syllabus: Aquí, el usuario puede ver los tres trimestres y la cantidad de sesiones completadas en cada uno. Se utilizan tres imágenes para representar el estado de las sesiones: una cuando aún no se han iniciado, otra cuando se ha visto al menos una sesión y, finalmente, una cuando se han visto todas las sesiones.
 
-- Trimester: Si el usuario hace clic en alguno de los trimestres puede acceder al mismo para ver todas las sesiónes disponibles, si hace clic en alguna de ellas queda como vista y accede a la página previa a de entrada a la sesión.
+- Trimester: Si el usuario hace clic en uno de los trimestres, puede acceder a él para ver todas las sesiones disponibles. Al hacer clic en una sesión, se marca como vista y se redirige a la página anterior, que contiene la información sobre la sesión.
 
-## Tencologias usadas
+## Tencologías utilizadas
 
 - Angular
 
-- routing
+- Routing
 
 - Tailwind CSS
 
 - ngx-translate
+
+- HttpClient
+
+- Google fonts
 
 ## Ejeccución aplicación
 
