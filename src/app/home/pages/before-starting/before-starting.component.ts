@@ -15,6 +15,7 @@ export class BeforeStartingComponent {
     private readonly _router: Router,
     private readonly _translate: TranslateService
   ) {
+    // Iconos grandes
     this.INSTRUCTIONS_BEFORE_STARTING = [
       {
         id: 1,

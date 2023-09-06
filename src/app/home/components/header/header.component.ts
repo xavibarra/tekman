@@ -19,6 +19,7 @@ export class HeaderComponent {
     }
   }
 
+  // iconos header
   readonly NAVBAR_ITEMS: Array<HeaderItem> = [
     {
       id: 1,

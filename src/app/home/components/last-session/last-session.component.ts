@@ -11,7 +11,7 @@ export class LastSessionComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _translateService: TranslateService // Inyecta el servicio de traducción
+    private readonly _translateService: TranslateService
   ) {}
 
   ngOnInit(): void {
